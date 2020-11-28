@@ -1,12 +1,20 @@
 $(function () {
   $(".next").click(function () {
-    $(".active").next().addClass("active");
-    $(".active").prev().removeClass("active");
+    if ($(".last").hasClass("active") == true) {
+      $(".first").addClass("active");
+      $(".last").removeClass("active");
+    } else {
+      $(".active").next().addClass("active");
+      $(".active").prev().removeClass("active");
+    }
   });
   $(".prev").click(function () {
-    $(".active").prev().addClass("active");
-    $(".active").next().removeClass("active");
+    if ($(".first").hasClass("active") == true) {
+      $(".last").addClass("active");
+      $(".first").removeClass("active");
+    } else {
+      $(".active").prev().addClass("active");
+      $(".active").next().removeClass("active");
+    }
   });
 });
-
-
