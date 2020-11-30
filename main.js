@@ -1,6 +1,6 @@
 $(function () {
   function nextImg() {
-    if ($(".last").hasClass("active") == true) {
+    if ($(".last").hasClass("active")) {
       $(".first").addClass("active");
       $(".last").removeClass("active");
     } else {
@@ -9,7 +9,7 @@ $(function () {
     }
   }
   function prevImg() {
-    if ($(".first").hasClass("active") == true) {
+    if ($(".first").hasClass("active")) {
       $(".last").addClass("active");
       $(".first").removeClass("active");
     } else {
